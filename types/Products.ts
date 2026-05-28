@@ -39,10 +39,10 @@ class Products {
   sortByPriceASC(ascending: boolean = true): Product[] {
     this.resetListCopy();
     if (ascending) {
-      let newProducts: Product[] = [];
+      const newProducts: Product[] = [];
 
       while (this.listCopy.length > 0) {
-        let cheapestProduct: Product = this.getCheapest();
+        const cheapestProduct: Product = this.getCheapest();
         newProducts.push(cheapestProduct);
         this.listCopy.splice(this.listCopy.indexOf(cheapestProduct), 1);
       }
@@ -50,10 +50,10 @@ class Products {
       this.resetListCopy();
       return newProducts;
     } else {
-      let newProducts: Product[] = [];
+      const newProducts: Product[] = [];
 
       while (this.listCopy.length > 0) {
-        let mostExpensiveProduct: Product = this.getCheapest(false);
+        const mostExpensiveProduct: Product = this.getCheapest(false);
         newProducts.push(mostExpensiveProduct);
         this.listCopy.splice(this.listCopy.indexOf(mostExpensiveProduct), 1);
       }
