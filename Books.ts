@@ -1,38 +1,57 @@
 import type { Product } from "./types/Product.ts";
 import Products from "./types/Products.ts";
 
-const books: Product[] = [
+const edFolha: Product[] = [
   {
-    id: 1,
-    name: "JavaScript",
-    price: 25.0,
-  },
-  {
-    id: 2,
     name: "PHP",
-    price: 15.0,
+    price: 15,
   },
   {
-    id: 3,
+    name: "JavaScript",
+    price: 25,
+  },
+  {
     name: "Java",
-    price: 30.0,
+    price: 30,
   },
   {
-    id: 4,
-    name: "Elixir",
-    price: 50.0,
-  },
-  {
-    id: 5,
     name: "Go",
-    price: 45.0,
+    price: 45,
   },
   {
-    id: 6,
-    name: "Python",
-    price: 20.0,
+    name: "Elixir",
+    price: 50,
   },
 ];
+
+const edGalho: Product[] = [
+  {
+    name: "Python",
+    price: 20,
+  },
+  {
+    name: "Rust",
+    price: 22,
+  },
+  {
+    name: "Ruby",
+    price: 28,
+  },
+  {
+    name: "C#",
+    price: 33,
+  },
+  {
+    name: "C++",
+    price: 35,
+  },
+  {
+    name: "Scala",
+    price: 40,
+  },
+];
+
+const books: Product[] = [...edFolha, ...edGalho];
 
 const Books: Products = new Products(books);
 
